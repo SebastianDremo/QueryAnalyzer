@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace QueryAnalyzer.Domain
 {
-    class JoinPart
+    public class JoinPart
     {
-        string Table { get; set; }
+        public string Table { get; set; }
         
-        string Column { get; set; }
+        public string Column { get; set; }
     }
 }

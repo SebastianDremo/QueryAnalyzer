@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QueryAnalyzer.Domain
 {
-    class JoinClause
+    public class JoinClause
     {
         public JoinPart LeftPart { get; set; }
 

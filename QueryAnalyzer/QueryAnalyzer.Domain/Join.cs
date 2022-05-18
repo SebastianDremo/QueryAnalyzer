@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QueryAnalyzer.Domain
 {
-    class Join
+    public class Join
     {
         public string JoinedTable { get; set; }
 
