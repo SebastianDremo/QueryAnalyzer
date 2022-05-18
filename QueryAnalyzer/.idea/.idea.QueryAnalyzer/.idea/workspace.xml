@@ -6,13 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37c68f87-3e5a-4a15-82a7-9e13f6f79f12" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Parser/Interfaces/IListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Interfaces/IListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Parser/Parser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Parser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Parser/QueryAnalyzer.Parser.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/QueryAnalyzer.Parser.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Parser/SqlListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/SqlListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Domain/Join.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Domain/Join.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Domain/JoinClause.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Domain/JoinClause.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Domain/JoinPart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Domain/JoinPart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Domain/Query.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Domain/Query.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +34,6 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -69,8 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652871970203</updated>
-      <workItem from="1652871978135" duration="1852000" />
-      <workItem from="1652877122188" duration="4385000" />
+      <workItem from="1652871978135" duration="602000" />
     </task>
     <servers />
   </component>
