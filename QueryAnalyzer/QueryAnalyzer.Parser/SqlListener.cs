@@ -51,10 +51,12 @@ public class SqlListener : SqlParserBaseListener, IListener
             leftJoinPart.TableName = onCondition.expression()[0]?.full_column_name().tablename?.GetText();
             leftJoinPart.Column = onCondition.expression()[0]?.full_column_name().column_name?.GetText();
             leftJoinPart.TableSchema = onCondition.expression()[0]?.full_column_name().schema?.GetText();
+            leftJoinPart.TableSchema ??= leftJoinPart.TableName == joinTableName ? joinTableSchema : tableSchema;
 
             rightJoinPart.TableName = onCondition.expression()?[1]?.full_column_name().tablename?.GetText();
             rightJoinPart.Column = onCondition.expression()?[1]?.full_column_name().column_name?.GetText();
             rightJoinPart.TableSchema = onCondition.expression()?[1]?.full_column_name().schema?.GetText();
+            rightJoinPart.TableSchema ??= rightJoinPart.TableName == joinTableName ? joinTableSchema : tableSchema;
 
             var joinClause = new JoinClause
             {
