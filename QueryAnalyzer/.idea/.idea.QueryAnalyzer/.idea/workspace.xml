@@ -6,13 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37c68f87-3e5a-4a15-82a7-9e13f6f79f12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Domain/Relation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Repository/Interfaces/IRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Repository/Repository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Service/FileService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Service/Interfaces/IFileService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.sln" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Domain/Join.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Domain/Join.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Domain/JoinClause.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Domain/JoinClause.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Domain/JoinPart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Domain/JoinPart.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Domain/Query.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Domain/Query.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,14 +29,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="QueryAnalyzer" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
