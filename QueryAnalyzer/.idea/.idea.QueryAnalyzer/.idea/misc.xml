@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ANTLRGenerationPreferences">
+    <option name="perGrammarGenerationSettings">
+      <list>
+        <PerGrammarGenerationSettings>
+          <option name="fileName" value="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammar/SqlLexer.g4" />
+          <option name="autoGen" value="true" />
+          <option name="outputDir" value="C:\Users\sebas\Projects\QueryAnalyzer\QueryAnalyzer\QueryAnalyzer.Parser\Grammar" />
+          <option name="libDir" value="" />
+          <option name="encoding" value="" />
+          <option name="pkg" value="" />
+          <option name="language" value="CSharp" />
+        </PerGrammarGenerationSettings>
+        <PerGrammarGenerationSettings>
+          <option name="fileName" value="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/TSqlParser.g4" />
+          <option name="autoGen" value="true" />
+          <option name="outputDir" value="C:\Users\sebas\Projects\QueryAnalyzer\QueryAnalyzer\QueryAnalyzer.Parser\Grammars" />
+          <option name="libDir" value="" />
+          <option name="encoding" value="" />
+          <option name="pkg" value="" />
+          <option name="language" value="CSharp" />
+          <option name="generateVisitor" value="true" />
+        </PerGrammarGenerationSettings>
+        <PerGrammarGenerationSettings>
+          <option name="fileName" value="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlLexer.g4" />
+          <option name="autoGen" value="true" />
+          <option name="outputDir" value="C:\Users\sebas\Projects\QueryAnalyzer\QueryAnalyzer\QueryAnalyzer.Parser\Grammars" />
+          <option name="libDir" value="" />
+          <option name="encoding" value="" />
+          <option name="pkg" value="" />
+          <option name="language" value="CSharp" />
+        </PerGrammarGenerationSettings>
+        <PerGrammarGenerationSettings>
+          <option name="fileName" value="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlParser.g4" />
+          <option name="autoGen" value="true" />
+          <option name="outputDir" value="C:\Users\sebas\Projects\QueryAnalyzer\QueryAnalyzer\QueryAnalyzer.Parser\Grammars" />
+          <option name="libDir" value="" />
+          <option name="encoding" value="" />
+          <option name="pkg" value="" />
+          <option name="language" value="CSharp" />
+          <option name="generateVisitor" value="true" />
+        </PerGrammarGenerationSettings>
+      </list>
+    </option>
+  </component>
+</project>
