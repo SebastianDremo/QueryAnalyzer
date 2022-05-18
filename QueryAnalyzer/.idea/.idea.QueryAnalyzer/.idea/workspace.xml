@@ -6,12 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37c68f87-3e5a-4a15-82a7-9e13f6f79f12" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Service/PropositionsService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Domain/Relationship.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Domain/Relationship.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Service/QueryAnalyzer.Service.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Service/QueryAnalyzer.Service.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Service/RelationshipService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Service/RelationshipService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Service/FileService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Service/Interfaces/IFileService.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer/QueryAnalyzer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer/QueryAnalyzer.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,24 +78,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/QueryAnalyzer/Program.cs</url>
-          <line>29</line>
-          <properties documentPath="C:\Users\SzymonKarpecki\source\repos\QueryAnalyzer\QueryAnalyzer\QueryAnalyzer\Program.cs" initialLine="29" containingFunctionPresentation="">
-            <startOffsets>
-              <option value="610" />
-            </startOffsets>
-            <endOffsets>
-              <option value="691" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

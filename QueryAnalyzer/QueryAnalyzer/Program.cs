@@ -5,7 +5,7 @@ using QueryAnalyzer.Service;
 Console.WriteLine("Insert your query:");
 Console.WriteLine();
 
-// var query = Console.ReadLine();
+// var script = Console.ReadLine();
 
 var script = @"SELECT
 soh.SalesOrderNumber,
