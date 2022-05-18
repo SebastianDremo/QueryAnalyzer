@@ -12,20 +12,22 @@ public class RelationshipService
 
         foreach(var join in query.Joins)
         {
-            relationships.Add(BuildRelationshipFromJoin(query.FromTable, join));
+            relationships.Add(BuildRelationshipFromJoin(query.FromTableName, join));
         }
+
+        return relationships;
     }
 
     private Relationship BuildRelationshipFromJoin(string fromTable, Join join)
     {
         string pkTable = fromTable;
-        string fkTable = join.JoinedTable;
+        string fkTable = join.JoinedTableName;
         List<string> pkColumns = new List<string>();
         List<string> fkColumns = new List<string>();
 
         foreach(JoinClause joinClause in join.JoinClauses)
         {
-            if(joinClause.LeftPart.Table.Equals(pkTable))
+            if(joinClause.LeftPart.TableName.Equals(pkTable))
             {
                 pkColumns.Add(joinClause.LeftPart.Column);
                 fkColumns.Add(joinClause.RightPart.Column);

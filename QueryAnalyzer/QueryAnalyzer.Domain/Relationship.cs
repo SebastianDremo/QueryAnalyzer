@@ -2,7 +2,7 @@
 
 using System.Collections.Generic;
 
-class Relationship
+public class Relationship
 {
     public string PKTable { get; set; }
 

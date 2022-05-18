@@ -9,6 +9,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\QueryAnalyzer.Parser\QueryAnalyzer.Parser.csproj" />
+      <ProjectReference Include="..\QueryAnalyzer.Service\QueryAnalyzer.Service.csproj" />
     </ItemGroup>
 
 </Project>
