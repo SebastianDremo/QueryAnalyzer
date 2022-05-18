@@ -3,5 +3,5 @@
 public interface IRepository
 {
     bool Connect();
-    bool SendQuery(string query);
+    bool SendScalarQuery(string query);
 }

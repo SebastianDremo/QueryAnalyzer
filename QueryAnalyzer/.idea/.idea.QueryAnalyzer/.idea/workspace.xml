@@ -6,12 +6,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37c68f87-3e5a-4a15-82a7-9e13f6f79f12" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Repository/UserRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Service/UniqueKeyService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Domain/Relationship.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Domain/Relationship.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Repository/Interfaces/IRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Repository/Interfaces/IRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Repository/QueryAnalyzer.Repository.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Repository/QueryAnalyzer.Repository.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Repository/Repository.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Service/QueryAnalyzer.Service.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Service/QueryAnalyzer.Service.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Service/RelationshipService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Service/RelationshipService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer/QueryAnalyzer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer/QueryAnalyzer.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +23,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -31,14 +40,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.49838188",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="QueryAnalyzer" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -77,6 +87,29 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="relationship-verification" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
@@ -85,18 +118,24 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/QueryAnalyzer/Program.cs</url>
-          <line>29</line>
-          <properties documentPath="C:\Users\SzymonKarpecki\source\repos\QueryAnalyzer\QueryAnalyzer\QueryAnalyzer\Program.cs" initialLine="29" containingFunctionPresentation="">
+          <line>56</line>
+          <properties documentPath="C:\Users\SzymonKarpecki\source\repos\QueryAnalyzer\QueryAnalyzer\QueryAnalyzer\Program.cs" initialLine="37" containingFunctionPresentation="">
             <startOffsets>
-              <option value="610" />
+              <option value="1516" />
             </startOffsets>
             <endOffsets>
-              <option value="691" />
+              <option value="1541" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="2" />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Frame#Program.&lt;Main&gt;$" memberName="relationships" />
+        <PinnedItemInfo parentTag="Frame#Program.&lt;Main&gt;$" memberName="queries" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
