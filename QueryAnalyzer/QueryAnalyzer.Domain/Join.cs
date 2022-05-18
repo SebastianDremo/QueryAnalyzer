@@ -7,4 +7,9 @@ public class Join
     public string JoinedTableSchema { get; set; }
 
     public List<JoinClause> JoinClauses { get; set; }
+
+    public Join()
+    {
+        JoinClauses = new List<JoinClause>();
+    }
 }

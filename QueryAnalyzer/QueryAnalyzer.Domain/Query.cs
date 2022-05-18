@@ -7,4 +7,9 @@ public class Query
     public string FromTableSchema { get; set; }
 
     public List<Join> Joins { get; set; }
+
+    public Query()
+    {
+        Joins = new List<Join>();
+    }
 }
