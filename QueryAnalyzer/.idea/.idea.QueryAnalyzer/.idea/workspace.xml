@@ -5,8 +5,7 @@
     <projectFile>QueryAnalyzer.Domain/QueryAnalyzer.Domain.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37c68f87-3e5a-4a15-82a7-9e13f6f79f12" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="37c68f87-3e5a-4a15-82a7-9e13f6f79f12" name="Changes" comment="Verifying if one of columns in relationship is Primary Key.">
       <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Service/PropositionsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Service/PropositionsService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" afterDir="false" />
     </list>
@@ -17,6 +16,17 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer.Domain/Relationship.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer.Parser/SqlListener.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer.Repository/Interfaces/IRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer.Repository/UserRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/QueryAnalyzer.Service/PropositionsService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer.Service/RelationshipService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer.Service/RelationshipService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -74,7 +84,44 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/QueryAnalyzer.Service/PropositionsService.cs</url>
+          <line>23</line>
+          <properties documentPath="C:\Users\SzymonKarpecki\source\repos\QueryAnalyzer\QueryAnalyzer\QueryAnalyzer.Service\PropositionsService.cs" initialLine="23" containingFunctionPresentation="method 'ProposeForeignKey'">
+            <startOffsets>
+              <option value="880" />
+            </startOffsets>
+            <endOffsets>
+              <option value="928" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Frame#QueryAnalyzer.Repository.UserRepository.SendScalarQuery" memberName="this" />
+        <PinnedItemInfo parentTag="Type#QueryAnalyzer.Domain.JoinClause" memberName="RightPart" />
+        <PinnedItemInfo parentTag="Frame#Program.&lt;Main&gt;$" memberName="queries" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

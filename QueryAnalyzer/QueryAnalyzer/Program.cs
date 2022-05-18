@@ -31,7 +31,10 @@ var propositionsService = new PropositionsService();
 foreach (var query in queries)
 {
     var relationships = relationshipService.BuildRelationshipsFromQuery(query);
-    //not sure how to use propositions here
+    foreach (var relationship in relationships)
+    {
+        Console.WriteLine(propositionsService.ProposeForeignKey(relationship));
+    }
 }
 
 
