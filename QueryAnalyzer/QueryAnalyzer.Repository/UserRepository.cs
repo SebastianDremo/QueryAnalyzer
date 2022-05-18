@@ -54,8 +54,8 @@ public class UserRepository : IRepository
                 connection.Open();
                 using (var command = new SqlCommand(query, connection))
                 {
-                    string obj = (string)command.ExecuteScalar();
-                    return !String.IsNullOrEmpty(obj);
+                    object result = command.ExecuteScalar();
+                    return result != null;
                 }
             }
         }

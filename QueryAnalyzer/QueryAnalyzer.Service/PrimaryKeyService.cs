@@ -3,7 +3,7 @@ using QueryAnalyzer.Repository;
 
 namespace QueryAnalyzer.Service;
 
-public class UniqueKeyService
+public class PrimaryKeyService
 {
 	
 	public bool CheckIfPKExists(string schema, string table, string column, UserRepository repository)
@@ -31,6 +31,6 @@ public class UniqueKeyService
 							AND c.[name] = '{column}'
 							AND uc.[primary_key] = 1 ";
 
-	    return repository.SendScalarQuery(query);
+		return repository.SendScalarQuery(query); 
     }
 }
