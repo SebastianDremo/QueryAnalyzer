@@ -7,10 +7,10 @@ public class PropositionsService
     public string ProposeForeignKey(Relationship relationship)
     {
         return ProposeForeignKey(
-                "pkSchema", //replace with relationship.PKSchema after merge
+                relationship.PKSchema, //replace with relationship.PKSchema after merge
                 relationship.PKTable, 
                 relationship.PKColumns,
-                "fkSchema", //relationship.FKSChema
+                relationship.FKSchema, //relationship.FKSChema
                 relationship.FKTable, 
                 relationship.FKColumns);
                
@@ -22,7 +22,7 @@ public class PropositionsService
         if (!string.IsNullOrEmpty(fkSchema)) fkSchema += ".";
         
        var text = @$"ALTER TABLE {fkSchema}{fkTable} ADD CONSTRAINT FK_{fkTable}{pkTable}
-                     FOREIGN KEY ({string.Join(",", pkColumns)}) REFERENCES {pkSchema}{pkTable}({string.Join(",", fkColumns)});";
+                     FOREIGN KEY ({string.Join(",", fkColumns)}) REFERENCES {pkSchema}{pkTable}({string.Join(",", pkColumns)});";
 
         return text;
     }

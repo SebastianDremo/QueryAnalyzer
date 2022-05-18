@@ -6,11 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37c68f87-3e5a-4a15-82a7-9e13f6f79f12" name="Changes" comment="Verifying if one of columns in relationship is Primary Key.">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Parser/SqlListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/SqlListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Repository/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Repository/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Service/RelationshipService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Service/RelationshipService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Service/UniqueKeyService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Service/PrimaryKeyService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +23,20 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer.Domain/Relationship.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer.Parser/SqlListener.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer.Repository/Interfaces/IRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/QueryAnalyzer.Repository/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer.Repository/UserRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/QueryAnalyzer.Service/PrimaryKeyService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer.Service/PropositionsService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer.Service/RelationshipService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer.Service/RelationshipService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/SzymonKarpecki/source/repos/QueryAnalyzer/QueryAnalyzer/QueryAnalyzer/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -42,15 +49,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "XThreadsFramesViewSplitterKey": "0.49838188",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.49838188&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="QueryAnalyzer" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -128,19 +135,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/QueryAnalyzer/Program.cs</url>
-          <line>92</line>
-          <properties documentPath="C:\Users\SzymonKarpecki\source\repos\QueryAnalyzer\QueryAnalyzer\QueryAnalyzer\Program.cs" initialLine="37" containingFunctionPresentation="">
-            <startOffsets>
-              <option value="2678" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2703" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/QueryAnalyzer.Service/RelationshipService.cs</url>
           <line>44</line>

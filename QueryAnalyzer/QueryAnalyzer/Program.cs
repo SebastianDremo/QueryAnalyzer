@@ -77,7 +77,7 @@ SalesLT.SalesOrderHeader
 INNER JOIN SalesLT.Customer ON
 SalesOrderHeader.SalesOrderID = Customer.CustomerID";
 
-var parser = new Parser(script5);
+var parser = new Parser(script4);
 var queries = parser.Run();
 
 var repository = new UserRepository("localhost", 3306, "sa", "bocian1412", "dataedo_innovation_day");
@@ -85,9 +85,15 @@ var database = new UserRepository("localhost", 3306, "sa", "bocian1412", "Advent
 
 var relatioshipService = new RelationshipService();
 var uniqueKeyService = new PrimaryKeyService();
+var propositionService = new PropositionsService();
+
 var relationships = new List<Relationship>();
 foreach (var query in queries)
 {
     relationships.AddRange(relatioshipService.BuildRelationshipsFromQuery(query, repository, database));
+    foreach (var relationship in relationships)
+    {
+        Console.WriteLine(propositionService.ProposeForeignKey(relationship));
+    }
 }
 Console.WriteLine("End");
