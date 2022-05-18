@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace QueryAnalyzer.Domain;
 
-namespace QueryAnalyzer.Domain
+public class Join
 {
-    public class Join
-    {
-        public string JoinedTable { get; set; }
+    public string JoinedTableName { get; set; }
 
-        public List<JoinClause> JoinClauses { get; set; }
-    }
+    public string JoinedTableSchema { get; set; }
+
+    public List<JoinClause> JoinClauses { get; set; }
 }
