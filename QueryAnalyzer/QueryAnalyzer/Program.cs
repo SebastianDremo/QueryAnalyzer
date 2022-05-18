@@ -25,7 +25,13 @@ var parser = new Parser(script);
 var queries = parser.Run();
 
 
+var relationshipService = new RelationshipService();
+var propositionsService = new PropositionsService();
+
 foreach (var query in queries)
 {
-    var relationships = new RelationshipService().BuildRelationshipsFromQuery(query);
+    var relationships = relationshipService.BuildRelationshipsFromQuery(query);
+    //not sure how to use propositions here
 }
+
+

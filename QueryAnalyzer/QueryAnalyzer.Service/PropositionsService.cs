@@ -8,17 +8,8 @@ public class PropositionsService
         if (!string.IsNullOrEmpty(pkSchema)) pkSchema += ".";
         if (!string.IsNullOrEmpty(fkSchema)) fkSchema += ".";
         
-        var pkColumnsText = string.Empty;
-        foreach (var pkColumn in pkColumns)
-        {
-            pkColumnsText += $"{pkColumn}, ";
-        }
-
-        var fkColumnsText = string.Empty;
-        foreach (var fkColumn in fkColumns)
-        {
-            fkColumnsText += $"{fkColumn}, ";
-        }
+        var pkColumnsText = string.Join(",", pkColumns);
+        var fkColumnsText = string.Join(",", fkColumns);
 
         var text = @$"ALTER TABLE {fkSchema}{fkTable} ADD CONSTRAINT FK_{fkTable}{pkTable}
                      FOREIGN KEY ({fkColumnsText.SkipLast(2)}) REFERENCES {pkSchema}{pkTable}({pkColumnsText.SkipLast(2)});";

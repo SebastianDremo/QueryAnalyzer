@@ -6,10 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37c68f87-3e5a-4a15-82a7-9e13f6f79f12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Service/PropositionsService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Service/FileService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Service/Interfaces/IFileService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Service/PropositionsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Service/PropositionsService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
