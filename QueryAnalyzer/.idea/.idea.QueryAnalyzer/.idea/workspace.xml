@@ -6,39 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37c68f87-3e5a-4a15-82a7-9e13f6f79f12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlLexer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlLexer.g4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlLexer.interp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlLexer.tokens" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlParser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlParser.g4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlParser.interp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlParser.tokens" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlParserBaseListener.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlParserBaseVisitor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlParserListener.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlParserVisitor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Interfaces/IListener.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Parser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/SqlListener.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/SqlLexer.interp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/SqlLexer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/SqlLexer.tokens" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/SqlParser.interp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/SqlParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/SqlParser.tokens" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/SqlParserBaseListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/SqlParserBaseVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/SqlParserListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/SqlParserVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/TSqlLexer.interp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/TSqlLexer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen/TSqlLexer.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Grammars/SqlLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Parser/Interfaces/IListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Interfaces/IListener.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Parser/Parser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Parser.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Parser/QueryAnalyzer.Parser.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/QueryAnalyzer.Parser.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Parser/SqlListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/SqlListener.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer/QueryAnalyzer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer/QueryAnalyzer.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652871970203</updated>
       <workItem from="1652871978135" duration="1852000" />
-      <workItem from="1652877122188" duration="1796000" />
+      <workItem from="1652877122188" duration="4385000" />
     </task>
     <servers />
   </component>

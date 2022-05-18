@@ -6,3 +6,4 @@ Console.WriteLine();
 var query = Console.ReadLine();
 
 var parser = new Parser(new SqlListener());
+var queries = parser.Run();

@@ -1,6 +1,8 @@
-﻿namespace QueryAnalyzer.Parser.Interfaces;
+﻿using QueryAnalyzer.Domain;
+
+namespace QueryAnalyzer.Parser.Interfaces;
 
 public interface IListener
 {
-    Action RelationFound { get; set; }
+    Action<Query> QueryFound { get; set; }
 }
