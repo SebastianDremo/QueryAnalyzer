@@ -1,4 +1,6 @@
 ﻿using QueryAnalyzer.Parser;
+using QueryAnalyzer.Service;
+
 
 Console.WriteLine("Insert your query:");
 Console.WriteLine();
@@ -21,3 +23,9 @@ soh.BillToAddressID = SalesLT.Address.AddressID;";
 
 var parser = new Parser(script);
 var queries = parser.Run();
+
+
+foreach (var query in queries)
+{
+    var relationships = new RelationshipService().BuildRelationshipsFromQuery(query);
+}

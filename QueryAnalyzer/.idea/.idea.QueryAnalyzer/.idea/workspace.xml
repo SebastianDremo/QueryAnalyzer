@@ -7,9 +7,11 @@
   <component name="ChangeListManager">
     <list default="true" id="37c68f87-3e5a-4a15-82a7-9e13f6f79f12" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Parser/Parser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Parser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Parser/SqlListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/SqlListener.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Domain/Relationship.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Domain/Relationship.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Service/QueryAnalyzer.Service.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Service/QueryAnalyzer.Service.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Service/RelationshipService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Service/RelationshipService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QueryAnalyzer/QueryAnalyzer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer/QueryAnalyzer.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,14 +68,35 @@
       <option name="presentableId" value="Default" />
       <updated>1652871970203</updated>
       <workItem from="1652871978135" duration="602000" />
+      <workItem from="1652886868796" duration="298000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/QueryAnalyzer/Program.cs</url>
+          <line>29</line>
+          <properties documentPath="C:\Users\SzymonKarpecki\source\repos\QueryAnalyzer\QueryAnalyzer\QueryAnalyzer\Program.cs" initialLine="29" containingFunctionPresentation="">
+            <startOffsets>
+              <option value="610" />
+            </startOffsets>
+            <endOffsets>
+              <option value="691" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
