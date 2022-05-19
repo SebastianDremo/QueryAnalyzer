@@ -99,7 +99,9 @@ foreach (var query in queries)
     }
 }
 
-Console.WriteLine("\n\nPropositions based on Dataedo repository");
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("Propositions based on Dataedo repository");
 var relationships2 = relatioshipService.GetFKForPKColumns(repository, database);
 foreach (var relationship in relationships2)
 {
