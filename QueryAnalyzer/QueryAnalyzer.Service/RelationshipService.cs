@@ -93,7 +93,8 @@ public class RelationshipService
             };
 
             if (CheckIfFKValuesPresentInPK(relationship, database)
-                && (CheckIfRelationshipExists(relationship, repository)))
+                && (CheckIfRelationshipExists(relationship, repository))
+                )
             {
                 relationships.Add(relationship);
             }

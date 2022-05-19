@@ -4,9 +4,6 @@ using QueryAnalyzer.Repository;
 using QueryAnalyzer.Service;
 
 
-Console.WriteLine("Insert your query:");
-Console.WriteLine();
-
 // var query = Console.ReadLine();
 
 //script1-3 - represents different orders of same tables in FROM and JOIN clauses
@@ -24,7 +21,9 @@ SalesLT.SalesOrderHeader
 INNER JOIN SalesLT.Customer ON
 SalesOrderHeader.CustomerID = Customer.CustomerID
 INNER JOIN SalesLT.Address ON
-SalesOrderHeader.BillToAddressID = SalesLT.Address.AddressID;";
+SalesOrderHeader.BillToAddressID = SalesLT.Address.AddressID
+WHERE
+    SalesLT.Address.City = 'Oxon';";
 
 var script2 = @"SELECT
 SalesOrderNumber,
@@ -35,7 +34,9 @@ SalesLT.Customer
 INNER JOIN SalesLT.SalesOrderHeader ON
 SalesOrderHeader.CustomerID = Customer.CustomerID
 INNER JOIN SalesLT.Address ON
-SalesOrderHeader.BillToAddressID = SalesLT.Address.AddressID;";
+SalesOrderHeader.BillToAddressID = SalesLT.Address.AddressID
+WHERE
+    SalesLT.Address.City = 'Chicago';";
 
 
 var script3 = $@"SELECT
@@ -80,25 +81,29 @@ SalesOrderHeader.SalesOrderID = Customer.CustomerID";
 
 var script7 = @"SELECT 
                *
-            FROM [tables]
-            WHERE [tables].[description] = 'description';";
+            FROM tables
+            WHERE tables.description = 'description';";
 
 var dataedoScript = @"SELECT 
-	                        [columns_changes].[before_column_name],
-	                        [columns].[name]
-                        FROM [dbo].[columns]
-                        INNER JOIN [dbo].[columns_changes] ON
-	                        [columns].[column_id] = [columns_changes].[column_id];";
+	                        triggers_changes.before_before,
+	                        triggers.name
+                        FROM dbo.triggers
+                        INNER JOIN dbo.triggers_changes ON
+	                        triggers.trigger_id = triggers_changes.trigger_id;";
 
-var parser = new Parser(script7);
-var queries = parser.Run();
-var indexPropositions = parser.GetIndexPropositions();
+
+
 
 var repository = new UserRepository("localhost", 3306, "sa", "bocian1412", "dataedo_innovation_day");
 var AdventureWorksDB = new UserRepository("localhost", 3306, "sa", "bocian1412", "AdventureWorksLT2019");
 var DataedoDB = new UserRepository("localhost", 3306, "sa", "bocian1412", "dataedo_10.3");
+
+var script = dataedoScript;
 var database = DataedoDB;
 
+var parser = new Parser(script);
+var queries = parser.Run();
+var indexPropositions = parser.GetIndexPropositions();
 
 var relatioshipService = new RelationshipService();
 var uniqueKeyService = new PrimaryKeyService();
@@ -134,4 +139,3 @@ foreach (var relationship in relationships2)
 }
 
 Console.WriteLine("End");
-Console.ReadKey();
