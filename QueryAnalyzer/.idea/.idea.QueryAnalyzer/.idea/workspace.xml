@@ -6,12 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37c68f87-3e5a-4a15-82a7-9e13f6f79f12" name="Changes" comment="Verifying if one of columns in relationship is Primary Key.">
-      <change afterPath="$PROJECT_DIR$/QueryAnalyzer.Domain/IndexProposition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QueryAnalyzer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Parser/Interfaces/IListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Interfaces/IListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Parser/Parser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/Parser.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Parser/SqlListener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Parser/SqlListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueryAnalyzer.Service/PropositionsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer.Service/PropositionsService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QueryAnalyzer/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -134,6 +130,45 @@
           <line>44</line>
           <properties documentPath="C:\Users\SzymonKarpecki\source\repos\QueryAnalyzer\QueryAnalyzer\QueryAnalyzer.Service\RelationshipService.cs" initialLine="44" containingFunctionPresentation="method 'BuildRelationshipFromJoin'" />
           <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/QueryAnalyzer/Program.cs</url>
+          <line>85</line>
+          <properties documentPath="C:\Users\sebas\Projects\QueryAnalyzer\QueryAnalyzer\QueryAnalyzer\Program.cs" initialLine="85" containingFunctionPresentation="">
+            <startOffsets>
+              <option value="2469" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2496" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/QueryAnalyzer.Parser/SqlListener.cs</url>
+          <line>83</line>
+          <properties documentPath="C:\Users\sebas\Projects\QueryAnalyzer\QueryAnalyzer\QueryAnalyzer.Parser\SqlListener.cs" initialLine="83" containingFunctionPresentation="method 'WhereSearchConditionFound'">
+            <startOffsets>
+              <option value="3579" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3623" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/QueryAnalyzer.Parser/SqlListener.cs</url>
+          <line>14</line>
+          <properties documentPath="C:\Users\sebas\Projects\QueryAnalyzer\QueryAnalyzer\QueryAnalyzer.Parser\SqlListener.cs" initialLine="14" containingFunctionPresentation="method 'EnterSelect_statement'">
+            <startOffsets>
+              <option value="430" />
+            </startOffsets>
+            <endOffsets>
+              <option value="499" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

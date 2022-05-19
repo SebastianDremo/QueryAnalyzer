@@ -30,7 +30,8 @@ public class Parser
 
         _listener = new SqlListener
         {
-            QueryFound = OnQueryFound
+            QueryFound = OnQueryFound,
+            ColumnForIndexFound = OnColumnForIndexFound
         };
     }
 

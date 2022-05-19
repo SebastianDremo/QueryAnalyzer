@@ -77,7 +77,12 @@ SalesLT.SalesOrderHeader
 INNER JOIN SalesLT.Customer ON
 SalesOrderHeader.SalesOrderID = Customer.CustomerID";
 
-var parser = new Parser(script4);
+var script7 = @"SELECT 
+               *
+            FROM [tables]
+            WHERE [tables].[description] = 'description';";
+
+var parser = new Parser(script7);
 var queries = parser.Run();
 var indexPropositions = parser.GetIndexPropositions();
 
@@ -115,3 +120,4 @@ foreach (var relationship in relationships2)
 }
 
 Console.WriteLine("End");
+Console.ReadKey();

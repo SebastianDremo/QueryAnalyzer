@@ -83,16 +83,29 @@ public class SqlListener : SqlParserBaseListener, IListener
     {
         var conditions = context.search_condition();
         var fullColumnNameContexts = new List<SqlParser.Full_column_nameContext>();
-        foreach (var condition in conditions)
+
+        if (conditions.Length == 0)
         {
-            foreach (var expressionContext in condition.predicate().expression())
+            foreach (var expressionContext in context.predicate().expression())
             {
                 fullColumnNameContexts.Add(expressionContext.full_column_name());
             }
         }
+        else
+        {
+            foreach (var condition in conditions)
+            {
+                foreach (var expressionContext in condition.predicate().expression())
+                {
+                    fullColumnNameContexts.Add(expressionContext.full_column_name());
+                }
+            }
+        }
+        
 
         foreach (var nameContext in fullColumnNameContexts)
         {
+            if(nameContext is null) continue;
             ColumnForIndexFound?.Invoke(nameContext.schema?.GetText(), nameContext.tablename?.GetText(), nameContext.column_name?.GetText()); 
         }
     }
