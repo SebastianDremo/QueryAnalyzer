@@ -9,20 +9,20 @@ using QueryAnalyzer.Domain;
 public class RelationshipService
 {
     
-    public List<Relationship> BuildRelationshipsFromQuery(Query query, UserRepository repository, UserRepository database)
+    public List<Relationship> BuildRelationshipsFromQuery(Query query, UserRepository database, UserRepository repository)
     {
         List<Relationship> relationships = new List<Relationship>();
 
         foreach(var join in query.Joins)
         {
-            relationships.AddRange(BuildRelationshipFromJoin(join, repository, database));
+            relationships.AddRange(BuildRelationshipFromJoin(join, database, repository));
         }
 
         return relationships;
     }
 
     //TODO SK: Refactor this code not to have all tests in this giant method
-    private List<Relationship> BuildRelationshipFromJoin(Join join, UserRepository repository, UserRepository database)
+    private List<Relationship> BuildRelationshipFromJoin(Join join, UserRepository database, UserRepository repository)
     {
         List<Relationship> relationships = new List<Relationship>();
         
@@ -92,12 +92,13 @@ public class RelationshipService
                 FKColumn = fkColumn
             };
 
-            if (!CheckIfFKValuesPresentInPK(relationship, database))
+            if (CheckIfFKValuesPresentInPK(relationship, database)
+                && (CheckIfRelationshipExists(relationship, repository)))
             {
-                continue;
+                relationships.Add(relationship);
             }
             
-            relationships.Add(relationship);
+            
         }
 
         return relationships;
@@ -194,7 +195,8 @@ public class RelationshipService
                     PKTable = reader.GetString(reader.GetOrdinal("PKTable")),
                     PKColumn = reader.GetString(reader.GetOrdinal("PKColumn"))
                 };
-                if (CheckIfFKValuesPresentInPK(relationship, database))
+                if (CheckIfFKValuesPresentInPK(relationship, database)
+                    && !CheckIfRelationshipExists(relationship, repository))
                 {
                     relationships.Add(relationship);
                 }
@@ -203,5 +205,32 @@ public class RelationshipService
         }
 
         return relationships;
+    }
+
+    public bool CheckIfRelationshipExists(Relationship relationship, UserRepository repository)
+    {
+        var query = $@"SELECT 
+	                        1 AS [1]
+                        FROM
+	                        [tables_relations] tr
+                        JOIN [tables_relations_columns] trc ON
+	                        tr.[table_relation_id] = trc.[table_relation_id]
+                        JOIN [tables] pk_tab ON
+	                        tr.[pk_table_id] = pk_tab.[table_id]
+                        JOIN [tables] fk_tab ON
+	                        tr.[fk_table_id] = fk_tab.[table_id]
+                        JOIN [columns] pk_c ON
+	                        trc.[column_pk_id] = pk_c.[column_id]
+                        JOIN [columns] fk_c ON
+	                        trc.[column_fk_id] = fk_c.[column_id]
+                        WHERE
+	                        pk_tab.[schema]     = '{relationship.PKSchema}' 
+	                        AND pk_tab.[name]   = '{relationship.PKTable}'
+	                        AND pk_c.[name]     = '{relationship.PKColumn}'
+	                        AND fk_tab.[schema] = '{relationship.FKSchema}' 
+	                        AND fk_tab.[name]   = '{relationship.FKTable}' 
+	                        AND fk_c.[name]     = '{relationship.FKColumn}' ";
+
+        return repository.SendScalarQuery(query);
     }
 }
