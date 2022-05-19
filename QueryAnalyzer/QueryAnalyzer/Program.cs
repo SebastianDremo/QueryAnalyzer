@@ -13,6 +13,7 @@ Console.WriteLine();
 //script4 - shows invalid FK candidate which is invalid due to value not present in PK column
 //script5 - shows invalid FK candidate, because none of JOINed columns is PK
 //script6 - shows invalid FK candidate, because both of JOINEDed columns are PK, what makes not much sense
+//sciprt7,8 - index propositions
 
 var script1 = @"SELECT
 SalesOrderNumber,
@@ -105,6 +106,9 @@ foreach (var query in queries)
     }
 }
 
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("Index propositions");
 foreach (var indexProposition in indexPropositions)
 {
     Console.WriteLine(propositionService.ProposeIndex(indexProposition)); 
