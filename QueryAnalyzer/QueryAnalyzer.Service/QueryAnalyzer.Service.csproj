@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\QueryAnalyzer.Domain\QueryAnalyzer.Domain.csproj" />
+      <ProjectReference Include="..\QueryAnalyzer.Repository\QueryAnalyzer.Repository.csproj" />
     </ItemGroup>
 
 </Project>
