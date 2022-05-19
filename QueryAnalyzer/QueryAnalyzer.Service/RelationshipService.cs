@@ -39,8 +39,8 @@ public class RelationshipService
             string fkTable = null;
             string pkSchema = null;
             string fkSchema = null;
-            List<string> pkColumns = new List<string>();
-            List<string> fkColumns = new List<string>();
+            string pkColumn = null;
+            string fkColumn = null;
 
             if (uniqueKeyService.CheckIfPKExists(
                     joinClause.LeftPart.TableSchema,
@@ -49,8 +49,8 @@ public class RelationshipService
                     repository))
             {
                 isLeftTablePK = true;
-                pkColumns.Add(joinClause.LeftPart.Column);
-                fkColumns.Add(joinClause.RightPart.Column);
+                pkColumn = joinClause.LeftPart.Column;
+                fkColumn = joinClause.RightPart.Column;
             }
             if (uniqueKeyService.CheckIfPKExists(
                     joinClause.RightPart.TableSchema,
@@ -59,8 +59,8 @@ public class RelationshipService
                     repository))
             {
                 isRightTablePK = true;
-                pkColumns.Add(joinClause.RightPart.Column);
-                fkColumns.Add(joinClause.LeftPart.Column);
+                pkColumn = joinClause.RightPart.Column;
+                fkColumn = joinClause.LeftPart.Column;
             }
             
             if(isLeftTablePK == isRightTablePK)
@@ -88,8 +88,8 @@ public class RelationshipService
                 FKSchema = fkSchema,
                 PKTable = pkTable,
                 FKTable = fkTable,
-                PKColumns = pkColumns,
-                FKColumns = fkColumns
+                PKColumn = pkColumn,
+                FKColumn = fkColumn
             };
 
             if (!CheckIfFKValuesPresentInPK(relationship, database))
@@ -105,26 +105,14 @@ public class RelationshipService
 
     public bool CheckIfFKValuesPresentInPK(Relationship relationship, UserRepository repository)
     {
-        foreach (var pkColumn in relationship.PKColumns)
-        {
-            foreach (var fkColumn in relationship.FKColumns)
-            {
-                //check for each, hence return inside if
-                if (!CheckIfFKValuesPresentInPK(
-                        relationship.PKSchema,
-                        relationship.FKSchema,
-                        relationship.PKTable,
-                        relationship.FKTable,
-                        pkColumn,
-                        fkColumn,
-                        repository
-                    ))
-                {
-                    return false;
-                }
-            }
-        }
-        return true;
+        return CheckIfFKValuesPresentInPK(
+                    relationship.PKSchema,
+                    relationship.FKSchema,
+                    relationship.PKTable,
+                    relationship.FKTable,
+                    relationship.PKColumn,
+                    relationship.FKColumn,
+                    repository);
     }
     
     public bool CheckIfFKValuesPresentInPK(
