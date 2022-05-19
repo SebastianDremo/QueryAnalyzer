@@ -92,7 +92,7 @@ var relationships = new List<Relationship>();
 Console.WriteLine("Propositions based on query");
 foreach (var query in queries)
 {
-    relationships.AddRange(relatioshipService.BuildRelationshipsFromQuery(query, repository, database));
+    relationships.AddRange(relatioshipService.BuildRelationshipsFromQuery(query, database, repository));
     foreach (var relationship in relationships)
     {
         Console.WriteLine(propositionService.ProposeForeignKey(relationship));
