@@ -20,10 +20,14 @@ public class PropositionsService
     {
         if (!string.IsNullOrEmpty(pkSchema)) pkSchema += ".";
         if (!string.IsNullOrEmpty(fkSchema)) fkSchema += ".";
-        
-       var text = @$"ALTER TABLE {fkSchema}{fkTable} ADD CONSTRAINT FK_{fkTable}{pkTable}
+        return  @$"ALTER TABLE {fkSchema}{fkTable} ADD CONSTRAINT FK_{fkTable}{pkTable}
                      FOREIGN KEY ({fkColumn}) REFERENCES {pkSchema}{pkTable}({pkColumn});";
+    }
 
-        return text;
+    public string ProposeIndex(IndexProposition proposition)
+    {
+        if (!string.IsNullOrEmpty(proposition.TableSchema)) proposition.TableSchema += ".";
+
+        return $"CREATE INDEX IX_{proposition.TableName}_{proposition.ColumnName} ON {proposition.TableSchema}{proposition.TableName} ({proposition.ColumnName});";
     }
 }

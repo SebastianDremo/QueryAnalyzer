@@ -79,6 +79,7 @@ SalesOrderHeader.SalesOrderID = Customer.CustomerID";
 
 var parser = new Parser(script4);
 var queries = parser.Run();
+var indexPropositions = parser.GetIndexPropositions();
 
 var repository = new UserRepository("localhost", 3306, "sa", "bocian1412", "dataedo_innovation_day");
 var database = new UserRepository("localhost", 3306, "sa", "bocian1412", "AdventureWorksLT2019");
@@ -97,6 +98,11 @@ foreach (var query in queries)
     {
         Console.WriteLine(propositionService.ProposeForeignKey(relationship));
     }
+}
+
+foreach (var indexProposition in indexPropositions)
+{
+    Console.WriteLine(propositionService.ProposeIndex(indexProposition)); 
 }
 
 Console.WriteLine();

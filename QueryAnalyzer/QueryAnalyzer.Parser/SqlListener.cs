@@ -6,9 +6,17 @@ namespace QueryAnalyzer.Parser;
 public class SqlListener : SqlParserBaseListener, IListener
 {
     public Action<Query> QueryFound { get; set; }
+    
+    //tableName, columnName 
+    public Action<string?,string?, string?> ColumnForIndexFound { get; set; }
 
     public override void EnterSelect_statement(SqlParser.Select_statementContext context)
     {
+        if (context.query_expression().query_specification().WHERE() != null)
+        {
+            WhereSearchConditionFound(context.query_expression().query_specification().where);
+        }
+        
         var query = new Query();
         var tableSourcesContext = context.query_expression().query_specification()
             .table_sources().table_source()
@@ -69,5 +77,23 @@ public class SqlListener : SqlParserBaseListener, IListener
         }
         
         QueryFound?.Invoke(query);
+    }
+
+    private void WhereSearchConditionFound(SqlParser.Search_conditionContext context)
+    {
+        var conditions = context.search_condition();
+        var fullColumnNameContexts = new List<SqlParser.Full_column_nameContext>();
+        foreach (var condition in conditions)
+        {
+            foreach (var expressionContext in condition.predicate().expression())
+            {
+                fullColumnNameContexts.Add(expressionContext.full_column_name());
+            }
+        }
+
+        foreach (var nameContext in fullColumnNameContexts)
+        {
+            ColumnForIndexFound?.Invoke(nameContext.schema?.GetText(), nameContext.tablename?.GetText(), nameContext.column_name?.GetText()); 
+        }
     }
 }
