@@ -9,12 +9,14 @@ public class Parser
 {
     private readonly IListener _listener;
     private readonly List<Query> _queries;
+    private readonly List<IndexProposition> _indexPropositions;
     private readonly ParseTreeWalker _treeWalker;
     private readonly SqlParser _parser;
         
     public Parser(string script)
     {
         _queries = new List<Query>();
+        _indexPropositions = new List<IndexProposition>();
 
         var inputStream = new AntlrInputStream(script);
         var lexer = new SqlLexer(inputStream);
@@ -28,7 +30,8 @@ public class Parser
 
         _listener = new SqlListener
         {
-            QueryFound = OnQueryFound
+            QueryFound = OnQueryFound,
+            ColumnForIndexFound = OnColumnForIndexFound
         };
     }
 
@@ -40,8 +43,25 @@ public class Parser
         return _queries;
     }
 
+    public IEnumerable<IndexProposition> GetIndexPropositions()
+    {
+        return _indexPropositions;
+    }
+
     private void OnQueryFound(Query query)
     {
         _queries.Add(query);
+    }
+
+    private void OnColumnForIndexFound(string? tableSchema, string? tableName, string? columnName)
+    {
+        var proposition = new IndexProposition
+        {
+            TableSchema = tableSchema,
+            TableName = tableName,
+            ColumnName = columnName
+        };
+        
+        _indexPropositions.Add(proposition);
     }
 }

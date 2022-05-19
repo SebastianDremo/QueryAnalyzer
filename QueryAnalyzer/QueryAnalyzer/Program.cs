@@ -13,6 +13,7 @@ Console.WriteLine();
 //script4 - shows invalid FK candidate which is invalid due to value not present in PK column
 //script5 - shows invalid FK candidate, because none of JOINed columns is PK
 //script6 - shows invalid FK candidate, because both of JOINEDed columns are PK, what makes not much sense
+//sciprt7,8 - index propositions
 
 var script1 = @"SELECT
 SalesOrderNumber,
@@ -77,8 +78,14 @@ SalesLT.SalesOrderHeader
 INNER JOIN SalesLT.Customer ON
 SalesOrderHeader.SalesOrderID = Customer.CustomerID";
 
-var parser = new Parser(script4);
+var script7 = @"SELECT 
+               *
+            FROM [tables]
+            WHERE [tables].[description] = 'description';";
+
+var parser = new Parser(script7);
 var queries = parser.Run();
+var indexPropositions = parser.GetIndexPropositions();
 
 var repository = new UserRepository("localhost", 3306, "sa", "bocian1412", "dataedo_innovation_day");
 var database = new UserRepository("localhost", 3306, "sa", "bocian1412", "AdventureWorksLT2019");
@@ -101,6 +108,14 @@ foreach (var query in queries)
 
 Console.WriteLine();
 Console.WriteLine();
+Console.WriteLine("Index propositions");
+foreach (var indexProposition in indexPropositions)
+{
+    Console.WriteLine(propositionService.ProposeIndex(indexProposition)); 
+}
+
+Console.WriteLine();
+Console.WriteLine();
 Console.WriteLine("Propositions based on Dataedo repository");
 var relationships2 = relatioshipService.GetFKForPKColumns(repository, database);
 foreach (var relationship in relationships2)
@@ -109,3 +124,4 @@ foreach (var relationship in relationships2)
 }
 
 Console.WriteLine("End");
+Console.ReadKey();
