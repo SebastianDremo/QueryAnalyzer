@@ -103,7 +103,7 @@ public class RelationshipService
         return relationships;
     }
 
-    public bool CheckIfFKValuesPresentInPK(Relationship relationship, UserRepository repository)
+    public bool CheckIfFKValuesPresentInPK(Relationship relationship, UserRepository database)
     {
         return CheckIfFKValuesPresentInPK(
                     relationship.PKSchema,
@@ -112,7 +112,7 @@ public class RelationshipService
                     relationship.FKTable,
                     relationship.PKColumn,
                     relationship.FKColumn,
-                    repository);
+                    database);
     }
     
     public bool CheckIfFKValuesPresentInPK(
@@ -122,7 +122,7 @@ public class RelationshipService
         string fkTable,
         string pkColumn,
         string fkColumn,
-        UserRepository repository)
+        UserRepository database)
     {
         pkSchema = string.IsNullOrEmpty(pkSchema) ? pkSchema : pkSchema + ".";
         fkSchema = string.IsNullOrEmpty(fkSchema) ? fkSchema : fkSchema + ".";
@@ -139,6 +139,69 @@ public class RelationshipService
         // if any value is returned by query (true) then there is a FK value
         // which is not present in PK hence returning negation
         
-        return !repository.SendScalarQuery(query);
+        return !database.SendScalarQuery(query);
+    }
+
+    public List<Relationship> GetFKForPKColumns(UserRepository repository, UserRepository database)
+    {
+        List<Relationship> relationships = new List<Relationship>();
+        var query = $@"SELECT 
+	                        uc_tab.[schema] AS PKSchema,
+	                        uc_tab.[name] AS PKTable,
+	                        uc_col.[name] AS PKColumn,
+	                        fk_tab.[schema] AS FKSchema,
+	                        fk_tab.[name] AS FKTable,
+	                        fk_col.[name] AS FKColumn
+                        FROM
+	                        [unique_constraints] uc
+                        INNER JOIN [tables] uc_tab ON
+	                        uc.[table_id] = uc_tab.[table_id]
+                        INNER JOIN [unique_constraints_columns] ucc ON
+	                        uc.[unique_constraint_id] = ucc.[unique_constraint_id]
+                        INNER JOIN [columns] uc_col ON
+	                        ucc.[column_id] = uc_col.[column_id]
+                        LEFT JOIN [columns] fk_col ON
+	                        fk_col.[name] = uc_col.[name]
+	                        OR fk_col.[name] = uc_tab.[name]
+                        LEFT JOIN [tables] fk_tab ON
+	                        fk_col.[table_id] = fk_tab.[table_id]
+	                        AND uc_tab.[database_id] = fk_tab.[database_id]
+                        WHERE 
+	                        uc.[primary_key] = 1
+	                        AND 
+	                        (
+		                        uc_tab.[schema] != fk_tab.[schema]
+		                        OR
+		                        (uc_tab.[schema] = fk_tab.[schema] AND uc_tab.[name] != fk_tab.[name])
+	                        )
+	                        AND uc_tab.[object_type] = 'TABLE'
+	                        AND fk_tab.[object_type] = 'TABLE';";
+        
+        using (var reader = repository.SendQuery(query))
+        {
+            if (reader == null)
+            {
+                return relationships;
+            }
+            while (reader.Read())
+            {
+                var relationship = new Relationship()
+                {
+                    FKSchema = reader.GetString(reader.GetOrdinal("FKSchema")),
+                    FKTable = reader.GetString(reader.GetOrdinal("FKTable")),
+                    FKColumn = reader.GetString(reader.GetOrdinal("FKColumn")),
+                    PKSchema = reader.GetString(reader.GetOrdinal("PKSchema")),
+                    PKTable = reader.GetString(reader.GetOrdinal("PKTable")),
+                    PKColumn = reader.GetString(reader.GetOrdinal("PKColumn"))
+                };
+                if (CheckIfFKValuesPresentInPK(relationship, database))
+                {
+                    relationships.Add(relationship);
+                }
+            }
+            
+        }
+
+        return relationships;
     }
 }

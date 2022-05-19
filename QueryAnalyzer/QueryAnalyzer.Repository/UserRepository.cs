@@ -1,4 +1,5 @@
-﻿using QueryAnalyzer.Repository.Interfaces;
+﻿using System.Data;
+using QueryAnalyzer.Repository.Interfaces;
 using Microsoft.Data.SqlClient;
 
 namespace QueryAnalyzer.Repository;
@@ -28,20 +29,22 @@ public class UserRepository : IRepository
         this._connectionString = builder.ConnectionString;
     }
 
-    public bool Connect()
+    public SqlDataReader SendQuery(string query)
     {
         try
         {
-            using(var connection = new SqlConnection(_connectionString))
+            var connection = new SqlConnection(_connectionString);
+            using (var command = new SqlCommand(query, connection))
             {
                 connection.Open();
+                var reader = command.ExecuteReader(CommandBehavior.CloseConnection);
+                return reader;
             }
-            return true;
         }
         catch (SqlException e)
         {
             Console.WriteLine(e.Message);
-            return false;
+            return null;
         }
     }
 

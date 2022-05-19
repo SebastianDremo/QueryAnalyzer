@@ -88,6 +88,8 @@ var uniqueKeyService = new PrimaryKeyService();
 var propositionService = new PropositionsService();
 
 var relationships = new List<Relationship>();
+
+Console.WriteLine("Propositions based on query");
 foreach (var query in queries)
 {
     relationships.AddRange(relatioshipService.BuildRelationshipsFromQuery(query, repository, database));
@@ -96,4 +98,12 @@ foreach (var query in queries)
         Console.WriteLine(propositionService.ProposeForeignKey(relationship));
     }
 }
+
+Console.WriteLine("\n\nPropositions based on Dataedo repository");
+var relationships2 = relatioshipService.GetFKForPKColumns(repository, database);
+foreach (var relationship in relationships2)
+{
+    Console.WriteLine(propositionService.ProposeForeignKey(relationship));
+}
+
 Console.WriteLine("End");
