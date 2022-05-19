@@ -1,7 +1,10 @@
-﻿namespace QueryAnalyzer.Repository.Interfaces;
+﻿using Microsoft.Data.SqlClient;
+
+namespace QueryAnalyzer.Repository.Interfaces;
 
 public interface IRepository
 {
-    bool Connect();
+    SqlDataReader SendQuery(string query);
+
     bool SendScalarQuery(string query);
 }

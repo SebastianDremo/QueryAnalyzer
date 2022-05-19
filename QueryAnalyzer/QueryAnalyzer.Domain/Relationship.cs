@@ -16,9 +16,9 @@ public class Relationship
 
     public string FKTable { get; set; }
 
-    public List<string> PKColumns { get; set; }
+    public string PKColumn { get; set; }
 
-    public List<string> FKColumns { get; set; }
+    public string FKColumn { get; set; }
     
     
 }
