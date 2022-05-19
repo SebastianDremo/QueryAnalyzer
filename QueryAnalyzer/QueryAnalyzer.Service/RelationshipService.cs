@@ -157,6 +157,8 @@ public class RelationshipService
 	                        [unique_constraints] uc
                         INNER JOIN [tables] uc_tab ON
 	                        uc.[table_id] = uc_tab.[table_id]
+                        INNER JOIN [databases] uc_db ON
+                            uc_tab.[database_id] = uc_db.[database_id]
                         INNER JOIN [unique_constraints_columns] ucc ON
 	                        uc.[unique_constraint_id] = ucc.[unique_constraint_id]
                         INNER JOIN [columns] uc_col ON
@@ -176,7 +178,8 @@ public class RelationshipService
 		                        (uc_tab.[schema] = fk_tab.[schema] AND uc_tab.[name] != fk_tab.[name])
 	                        )
 	                        AND uc_tab.[object_type] = 'TABLE'
-	                        AND fk_tab.[object_type] = 'TABLE';";
+	                        AND fk_tab.[object_type] = 'TABLE'
+                            AND uc_db.[name] = '{database.GetDatabaseName()}';";
         
         using (var reader = repository.SendQuery(query))
         {

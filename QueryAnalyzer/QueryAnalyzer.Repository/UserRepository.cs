@@ -29,6 +29,13 @@ public class UserRepository : IRepository
         this._connectionString = builder.ConnectionString;
     }
 
+    public string GetDatabaseName()
+    {
+        var builder = new SqlConnectionStringBuilder(this._connectionString);
+
+        return builder.InitialCatalog;
+    }
+    
     public SqlDataReader SendQuery(string query)
     {
         try

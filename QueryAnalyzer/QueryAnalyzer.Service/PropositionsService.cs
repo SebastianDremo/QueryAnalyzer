@@ -20,7 +20,7 @@ public class PropositionsService
     {
         if (!string.IsNullOrEmpty(pkSchema)) pkSchema += ".";
         if (!string.IsNullOrEmpty(fkSchema)) fkSchema += ".";
-        return  @$"ALTER TABLE {fkSchema}{fkTable} ADD CONSTRAINT FK_{fkTable}{pkTable}
+        return  @$"ALTER TABLE {fkSchema}{fkTable} ADD CONSTRAINT FK_{fkTable}_{pkTable}
                      FOREIGN KEY ({fkColumn}) REFERENCES {pkSchema}{pkTable}({pkColumn});";
     }
 
